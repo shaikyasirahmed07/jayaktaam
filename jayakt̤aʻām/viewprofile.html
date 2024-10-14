@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000; /* Black background */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .profile-card {
+            width: 100%;
+            background-color: #484346; /* Dark background */
+            padding: 50px;
+            border-radius: 0;
+            box-shadow: 0px 0px 10px rgb(255, 255, 255);
+            text-align: center;
+        }
+
+        .profile-image img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0px 0px 10px rgb(255, 255, 255);
+        }
+
+        .upload-btn {
+            background-color: #4d564e;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .upload-btn:hover {
+            background-color: #007906;
+        }
+
+        .profile-info p {
+
+            text-align: center;
+            margin: 5px 0;
+            color: rgb(255, 253, 253);
+        }
+
+        strong {
+            color: rgb(255, 253, 253);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-card">
+            <div class="profile-image">
+                <img id="profilePic" src="images/default-avatar.png" alt="User Image">
+            </div>
+            <input type="file" id="imageUpload" accept="image/*" style="display:none" />
+            <button class="upload-btn" onclick="document.getElementById('imageUpload').click();">Upload Image</button>
+            
+            <div class="profile-info">
+                <p><strong>Name:</strong>Shaik Yasir Ahmed</p>
+                <p><strong>ID:</strong> 2200030080</p>
+                <p><strong>Gender:</strong> Male</p>
+                <p><strong>Contact Number:</strong> 9515031101</p>
+                <p><strong>Email:</strong> shaikyasirahmed07@gmail.com</p>
+                <p><strong>Program of Study:</strong> B.Tech</p>
+                <p><strong>Username:</strong>yasirahmed07</p>
+                <p><strong>Year of Study:</strong> 3</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('imageUpload').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('profilePic').src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>
+</html>

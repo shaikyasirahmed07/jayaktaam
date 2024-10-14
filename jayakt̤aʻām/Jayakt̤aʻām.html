@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAYAKT̤AʻĀM.</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            font-family: 'Poppins', sans-serif;
+        }
+        .background-image {
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)); /* Dark overlay */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .container {
+            color: white;
+        }
+        .title {
+            font-size: 3em;
+            font-weight: 700;
+            margin-bottom: 40px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .icon-container {
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+            max-width: 1200px;
+            margin: auto;
+            animation: slideUp 2s ease-in-out;
+        }
+        .icon-box {
+            text-align: center;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        .icon-box:hover {
+            transform: translateY(-10px);
+        }
+        .icon-box img {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 15px;
+            filter: invert(100%); /* White icons */
+        }
+        .icon-box p {
+            font-size: 1.5em;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        /* Button-like animation for the icons */
+        .icon-box a {
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            border: 2px solid white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+        }
+        .icon-box a:hover {
+            background-color: white;
+            color: black;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2.5em;
+            }
+            .icon-box img {
+                width: 100px;
+                height: 100px;
+            }
+            .icon-box p {
+                font-size: 1.2em;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background-image">
+        <div class="container">
+            <div class="title">JAYAKT̤AʻĀM</div>
+            <div class="title">A STEP FOR VICTORY OVER HUNGER</div>
+            <div class="icon-container">
+                <div class="icon-box">
+                    <a href="Adminlogin.html">
+                        <img src="https://img.icons8.com/ios-filled/100/ffffff/administrator-male.png" alt="Admin Icon">
+                        <p>Admin</p>
+                    </a>
+                </div>
+                <div class="icon-box">
+                    <a href="Facultylogin.html">
+                        <img src="https://img.icons8.com/ios-filled/100/ffffff/businessman.png" alt="Faculty Icon">
+                        <p>Faculty</p>
+                    </a>
+                </div>
+                <div class="icon-box">
+                    <a href="StudentLogin.html">
+                        <img src="https://img.icons8.com/ios-filled/100/ffffff/student-male.png" alt="Student Icon">
+                        <p>Student</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

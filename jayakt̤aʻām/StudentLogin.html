@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+        .image-section {
+            width: 50%;
+            background-color: #383b40; /* Blue background */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .image-section img {
+            width: 90%;
+            height: 90%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .form-section {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff;
+            padding: 40px;
+        }
+        .form-section h1 {
+            color: #000000;
+            margin-bottom: 20px;
+        }
+        .form-section h2 {
+            color: #000;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 1.1em;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #32363e;
+            color: #fff;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #3f5e2a;
+        }
+        .extra-options {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            gap: 175px;
+
+        }
+        .extra-options a {
+            text-decoration: none;
+            font-size: 0.9em;
+            color: #000000;
+        }
+        .extra-options a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+    <script>
+        function validateForm(event) {
+            // Get the username and password input values
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Username validation: at least 10 characters with at least one number
+            var usernamePattern = /^(?=.*[0-9])[a-zA-Z0-9]{10,}$/;
+            if (!usernamePattern.test(username)) {
+                alert("Username must be at least 10 characters long and include at least one number.");
+                event.preventDefault(); // Prevent form submission
+                return false;
+            }
+
+            // Password validation: at least 15 characters, at least one number and one special character
+            var passwordPattern = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{15,}$/;
+            if (!passwordPattern.test(password)) {
+                alert("Password must be at least 15 characters long and include at least one number and one special character.");
+                event.preventDefault(); // Prevent form submission
+                return false;
+            }
+
+            // If both are valid, the form will be submitted
+            return true;
+        }
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Image section -->
+        <div class="image-section">
+        <img src="images/1.jpg" alt="Login Image"> 
+        </div>
+
+        <!-- Form section -->
+        <div class="form-section">
+            <h1>Welcome!</h1>
+            <h2>STUDENT LOGIN</h2>
+
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" placeholder="Username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Password" required>
+            </div>
+
+            <form action="admindashboard.html" method="GET" onsubmit="return validateForm(event)">
+                <button class="btn" type="submit">Login</button>
+            </form>
+
+            <div class="extra-options">
+                <div>
+                    <input type="checkbox" id="remember">
+                    <label for="remember">Remember</label>
+                </div>
+                <a href="StudentRegistration.html">Sign Up</a>
+                <a href="forgetpassword.html">Forgot Password?</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
