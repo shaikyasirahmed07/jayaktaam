@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="viewprofile.css">
+</head>
+<body>
+    <div class="container">
+        <div class="profile-card">
+            <div class="profile-image">
+                <img id="profilePic" src="images/default-avatar.png" alt="User Image">
+            </div>
+            <input type="file" id="imageUpload" accept="image/*" style="display:none" />
+            <button class="upload-btn" onclick="document.getElementById('imageUpload').click();">Upload Image</button>
+            
+            <div class="profile-info">
+                <p><strong>Name:</strong>Shaik Yasir Ahmed</p>
+                <p><strong>ID:</strong> 2200030080</p>
+                <p><strong>Gender:</strong> Male</p>
+                <p><strong>Contact Number:</strong> 9515031101</p>
+                <p><strong>Email:</strong> shaikyasirahmed07@gmail.com</p>
+                <p><strong>Program of Study:</strong> B.Tech</p>
+                <p><strong>Username:</strong>yasirahmed07</p>
+                <p><strong>Year of Study:</strong> 3</p>
+            </div>
+        </div>
+    </div>
+    <script src="viewprofile.js"></script>
+</body>
+</html>

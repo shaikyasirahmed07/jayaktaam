@@ -1,0 +1,81 @@
+/* Reset default styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Contact section styling */
+.contact-section {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-content {
+    max-width: 600px;
+    margin: auto;
+}
+
+.call-icon {
+    width: 342px; /* Adjust icon size */
+    margin-bottom: 10px;
+}
+
+/* Heading style */
+h2 {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+/* Paragraph styling */
+p {
+    font-size: 25px;
+    line-height: 1.5;
+}
+
+/* Footer styling */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.social-icons {
+    margin: 10px 0;
+}
+
+.social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #ffa500; /* Change color on hover */
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .contact-section {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .call-icon {
+        width: 40px; /* Smaller icon on smaller screens */
+    }
+}
